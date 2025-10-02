@@ -1,0 +1,18 @@
+Name field is editable: true
+Name field is editable
+Email field is editable: true
+Email field is enabled and editable
+Phone field is editable: true
+Phone field is enabled and editable
+Textarea is editable: true
+Textarea is enabled and editable
+male radio button is enabled
+sunday checkbox is enabled
+monday checkbox is enabled
+tuesday checkbox is enabled
+wednesday checkbox is enabled
+thursday checkbox is enabled
+friday checkbox is enabled
+saturday checkbox is enabled
+Number of options:10
+Number of colors in the multi select dropdown:   undefined
