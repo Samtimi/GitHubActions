@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","2059","Test1 Report","chromium","Wed Aug 20 07:12:13 IST 2025","passed","Wed Aug 20 07:12:15 IST 2025","","AllureReportTest.spec.js","",""
+"","7622","Test2 Report","chromium","Wed Aug 20 07:12:16 IST 2025","passed","Wed Aug 20 07:12:23 IST 2025","","AllureReportTest.spec.js","",""
+"","8598","Test3 Report","chromium","Wed Aug 20 07:12:23 IST 2025","failed","Wed Aug 20 07:12:32 IST 2025","","AllureReportTest.spec.js","",""
