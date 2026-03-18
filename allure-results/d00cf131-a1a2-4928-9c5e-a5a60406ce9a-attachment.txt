@@ -1,0 +1,4 @@
+Logo is visible: true
+Username field is editable: true
+Password field is editable: true
+Login button is enabled: true
