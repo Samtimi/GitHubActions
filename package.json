@@ -2,8 +2,9 @@
   "name": "playwrightpractice",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
-
+  "scripts": {
+    "test": "npx playwright test tests/rahul/webapitest.spec.js --headed"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "pdf-parse": "^2.4.5"
   },
   "dependencies": {
+    "exceljs": "^4.4.0",
     "node": "^20.20.0"
   }
 }

@@ -16,6 +16,12 @@ import { on } from 'events';
 export default defineConfig({
   testDir: './tests',
 
+  /* Maximum time one test can run for. */
+  timeout: 30 * 1000,
+  expect: {
+    /* Maximum time expect() should wait for the condition to be met. */
+    timeout: 5 * 1000
+  },
   /* Run tests in files in parallel */
   fullyParallel: true,
 
@@ -31,8 +37,8 @@ export default defineConfig({
 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [['html']
-            // ['allure-playwright',{outputFolder: 'my-allure-results'}],
-            // ['github']
+             //['allure-playwright',{outputFolder: 'my-allure-results'}],
+             //['github']
             ],
              
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -46,17 +52,47 @@ export default defineConfig({
       mode: 'retain-on-failure',
       size: {width: 640, height: 420}
     },*/
-    //screenshot: 'only-on-failure'
+    screenshot: 'only-on-failure'
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { 
+        browserName : "chromium",
+        headless : false,
+        screenshot: 'only-on-failure',
+        trace: 'on',
+        viewport: {width: 1280, height: 720},
+       // ignoreHttpsRoorts: true,
+       // permissions: ['geolocation'],
+       /*  video: {
+          mode: 'retain-on-failure',
+          size: {width: 640, height: 420}
+        }, */
+
+      },
+      
     },
-/*
+
     {
+      name: 'safari',
+      use: { 
+        browserName : "webkit",
+        headless : false,
+        screenshot: 'only-on-failure',
+        trace: 'on',
+        video: {
+          mode: 'retain-on-failure',
+          size: {width: 640, height: 420}
+        },
+
+      },
+      
+    },
+
+    /* {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
@@ -64,8 +100,8 @@ export default defineConfig({
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
-    },
-*/
+    }, */
+
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',

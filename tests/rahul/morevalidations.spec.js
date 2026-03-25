@@ -36,3 +36,43 @@ test('more validations', async({page})=>{
 
 
 });
+
+//if you want to run tests in parallel, you can use test.describe.parallel() method. 
+// //It will run all the tests inside the describe block in parallel.
+
+test.describe.parallel('parallel tests', () => {
+    test('test1', async({page})=>{
+        await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
+        console.log('test1');
+    });
+
+    test('test2', async({page})=>{
+        await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
+        console.log('test2');
+    });
+
+    test('test3', async({page})=>{
+        await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
+        console.log('test3');
+    });
+
+    //If you want to run tests sequentially, you can use test.describe.serial() method. 
+    //It will run all the tests inside the describe block sequentially.
+
+    test.describe.serial('serial tests', () => {
+        test('test4', async({page})=>{
+            await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
+            console.log('test4');
+        });
+
+        test('test5', async({page})=>{
+            await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
+            console.log('test5');
+        });
+
+        test('test6', async({page})=>{
+            await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
+            console.log('test6');
+        });
+    });
+});

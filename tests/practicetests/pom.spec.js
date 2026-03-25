@@ -1,7 +1,7 @@
 const {test, expect} = require('@playwright/test')
-import { LoginPage } from '../../pages/LoginPage';
-import { HomePage } from '../../pages/HomePage';
-import { CartPage } from '../../pages/CartPage'; 
+const { LoginPage } = require('../../pageobjects/LoginPage');
+const { HomePage } = require('../../pages/HomePage');
+const { CartPage } = require('../../pages/CartPage')
 
 test('test', async ({page})=>{
 
