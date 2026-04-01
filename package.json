@@ -3,7 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test tests/rahul/webapitest.spec.js --headed"
+    "test": "npx playwright test --headed",
+    "webtest": "npx playwright test --grep @Web --project=chromium",
+     "runtestinfirefox": "npx playwright test  --project=firefox",
+     "runtestsinchromium": "npx playwright test  --project=chromium",
+     "runtestsinwebkit": "npx playwright test  --project=webkit",
+      "mobiletest": "npx playwright test --grep @Mobile --project=chromium",
+      "APItest": "npx playwright test --grep @API",
+      "runtestinparallel": "npx playwright test --project=chromium --workers=3",
+      "testgenerateallurereport": "npx playwright test tests/rahul/ClientApp.spec.js --project=chromium && allure generate ./allure-report --clean -o allure-report && allure open allure-report",
+      "testallurereport": "allure generate my-allure-results --clean -o allure-report && allure open allure-report"
+
+
   },
   "keywords": [],
   "author": "",

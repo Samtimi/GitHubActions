@@ -1,6 +1,6 @@
 const {test,expect} = require("@playwright/test");
 
-test('screentshot test', async({page})=>{
+test('@Visual Screenshot Test', async({page})=>{
     await page.goto("https://rahulshettyacademy.com/client/#/auth/login");
     const emailField = page.locator("#userEmail");
     await expect(emailField).toBeVisible();
